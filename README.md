@@ -1,4 +1,4 @@
-# Nan Xiao — Portfolio
+# Shawn Xiao — Portfolio
 
 Personal portfolio site, live at https://shawn-xiao40.github.io
 
