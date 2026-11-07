@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nan Xiao — Applied Statistics & Data Analysis</title>
+  <meta name="description" content="Portfolio of Nan Xiao: applied statistics, data analysis, and reproducible research in R." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%231f3a5f'/><text x='16' y='22' font-family='Georgia' font-size='16' fill='white' text-anchor='middle'>NX</text></svg>" />
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a href="#top" class="logo">Nan Xiao</a>
+      <nav>
+        <a href="#work">Work</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+        <button id="theme" class="theme-btn" aria-label="Toggle dark mode">◐</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero wrap">
+      <p class="eyebrow">Applied Statistics · Data Analysis</p>
+      <h1>I use data to answer <em>real questions</em> — carefully, and reproducibly.</h1>
+      <p class="lede">
+        I'm Nan Xiao. I like finding natural experiments hiding in everyday data, testing
+        them with the right model, and being honest about what the results can and can't say.
+      </p>
+      <div class="cta">
+        <a class="btn primary" href="#work">See my work</a>
+        <a class="btn" href="https://github.com/Shawn-Xiao40" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+    </section>
+
+    <section id="work" class="wrap section">
+      <h2 class="section-title"><span>01</span> Featured work</h2>
+
+      <article class="project">
+        <div class="project-head">
+          <div>
+            <p class="tag-line">R · Logistic regression · Natural experiment</p>
+            <h3>Does home‑court advantage disappear without fans?</h3>
+          </div>
+          <a class="btn small" href="https://github.com/Shawn-Xiao40/nba-home-advantage" target="_blank" rel="noopener">View project ↗</a>
+        </div>
+
+        <p>
+          Eleven NBA seasons (2015–2025, 14,126 games) used the COVID era as a natural experiment.
+          Games in empty home arenas keep travel and arena familiarity but remove the crowd.
+          The neutral‑site Orlando bubble removes all three. Comparing them shows where
+          home‑court advantage actually comes from.
+        </p>
+
+        <div class="chart" role="img" aria-label="Home win percentage by crowd condition: full crowd 57.1%, limited fans 58.6%, home arena with no fans 50.3%, bubble 52.0%.">
+          <p class="chart-title">Home win % by crowd condition</p>
+          <div class="bar-row"><span class="label">Full crowd</span><div class="track"><div class="bar" style="--v:57.1"></div></div><span class="val">57.1%</span></div>
+          <div class="bar-row"><span class="label">Limited fans</span><div class="track"><div class="bar" style="--v:58.6"></div></div><span class="val">58.6%</span></div>
+          <div class="bar-row"><span class="label">Home, no fans</span><div class="track"><div class="bar accent" style="--v:50.3"></div></div><span class="val">50.3%</span></div>
+          <div class="bar-row"><span class="label">Bubble</span><div class="track"><div class="bar muted" style="--v:52.0"></div></div><span class="val">52.0%</span></div>
+          <div class="axis"><span>40%</span><span class="fifty">50% — coin flip</span><span>60%</span></div>
+        </div>
+
+        <div class="stats">
+          <div class="stat"><b>0.72×</b><span>odds of a home win without fans, controlling for team strength (95% CI 0.60–0.86)</span></div>
+          <div class="stat"><b>p ≈ 0.002</b><span>drop in home win rate, two‑proportion z‑test</span></div>
+          <div class="stat"><b>≈ bubble</b><span>empty home arenas performed about the same as neutral sites, which points to crowds</span></div>
+        </div>
+
+        <p class="note">
+          <strong>Caveat I flagged:</strong> home advantage was already declining before COVID
+          (58.6% → 55.5%), so the true crowd effect is probably a bit smaller than the raw gap.
+        </p>
+      </article>
+
+      <div class="more">
+        <p>More projects coming soon. Follow along on <a href="https://github.com/Shawn-Xiao40" target="_blank" rel="noopener">GitHub</a>.</p>
+      </div>
+    </section>
+
+    <section id="skills" class="wrap section">
+      <h2 class="section-title"><span>02</span> Toolkit</h2>
+      <div class="skills">
+        <div class="skill-group">
+          <h4>Statistical methods</h4>
+          <ul>
+            <li>Hypothesis testing (z, Welch t, exact binomial)</li>
+            <li>Linear & logistic regression</li>
+            <li>Model diagnostics: residuals, Q‑Q, VIF, calibration</li>
+            <li>Causal thinking & natural experiments</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h4>Tools</h4>
+          <ul class="chips">
+            <li>R</li><li>tidyverse</li><li>ggplot2</li><li>broom</li><li>car</li>
+            <li>R Markdown</li><li>knitr</li><li>Git</li><li>GitHub</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h4>How I work</h4>
+          <ul>
+            <li>Start from a clear research question</li>
+            <li>Reproducible pipelines: raw data → report</li>
+            <li>Plain‑language write‑ups for non‑specialists</li>
+            <li>Name the limitations upfront</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="wrap section contact">
+      <h2 class="section-title"><span>03</span> Get in touch</h2>
+      <p>Open to data analysis roles, research collaborations, and interesting questions.</p>
+      <div class="cta">
+        <a class="btn primary" href="https://github.com/Shawn-Xiao40" target="_blank" rel="noopener">github.com/Shawn-Xiao40 ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <span>© <span id="yr">2026</span> Nan Xiao</span>
+    <span class="mono">Built by hand · hosted on GitHub Pages</span>
+  </footer>
+
+  <script>
+    (function () {
+      var root = document.documentElement, btn = document.getElementById('theme');
+      try { var saved = localStorage.getItem('theme'); if (saved) root.dataset.theme = saved; } catch (e) {}
+      btn.addEventListener('click', function () {
+        var dark = root.dataset.theme ? root.dataset.theme === 'dark'
+          : matchMedia('(prefers-color-scheme: dark)').matches;
+        root.dataset.theme = dark ? 'light' : 'dark';
+        try { localStorage.setItem('theme', root.dataset.theme); } catch (e) {}
+      });
+      document.getElementById('yr').textContent = new Date().getFullYear();
+      var io = new IntersectionObserver(function (es) {
+        es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+      }, { threshold: 0.3 });
+      document.querySelectorAll('.chart').forEach(function (el) { io.observe(el); });
+    })();
+  </script>
+</body>
+</html>
