@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=2" />
+  <link rel="stylesheet" href="style.css?v=3" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%231f3a5f'/><text x='16' y='22' font-family='Georgia' font-size='16' fill='white' text-anchor='middle'>SX</text></svg>" />
 </head>
 <body>
@@ -91,14 +91,16 @@
             <h4>Analytical</h4>
             <ul class="chips">
               <li>Regression analysis</li><li>Statistical modelling</li><li>Hypothesis testing</li>
-              <li>Data visualization</li><li>Financial modelling</li><li>Market research</li>
+              <li>Data visualization</li><li>Cohort &amp; RFM analysis</li><li>Dashboard design</li>
+              <li>Financial modelling</li><li>Market research</li>
             </ul>
           </div>
           <div class="skill-group">
             <h4>Software &amp; tools</h4>
             <ul class="chips">
-              <li>R</li><li>tidyverse</li><li>ggplot2</li><li>R Markdown</li><li>Python</li>
-              <li>Excel</li><li>PowerPoint</li><li>Git / GitHub</li>
+              <li>SQL</li><li>DuckDB</li><li>Python</li><li>pandas</li><li>scipy</li>
+              <li>R</li><li>tidyverse</li><li>ggplot2</li><li>Apache Superset</li><li>Docker</li>
+              <li>GitHub Actions</li><li>Excel</li><li>PowerPoint</li><li>Git / GitHub</li>
             </ul>
           </div>
           <div class="skill-group">
@@ -116,6 +118,40 @@
     <!-- 03 PROJECTS -->
     <section id="projects" class="wrap section">
       <h2 class="section-title"><span>03</span> Projects</h2>
+
+      <article class="project">
+        <div class="project-head">
+          <div>
+            <p class="tag-line">SQL (DuckDB) · Python · Statistical testing · Apache Superset</p>
+            <h3>Olist e‑commerce: what drives customer satisfaction?</h3>
+          </div>
+          <a class="btn small" href="https://github.com/Shawn-Xiao40/olist-ecommerce-analysis" target="_blank" rel="noopener">View project ↗</a>
+        </div>
+
+        <p>
+          An end‑to‑end analysis of ~100K real orders from a Brazilian marketplace (2016–2018). I modelled
+          8 raw tables into fact tables with SQL, answered six business questions (growth, funnel,
+          cohort retention, RFM segments, delivery vs. reviews, category performance), and built
+          three Superset dashboards with 22 charts, all generated as code through the Superset API.
+        </p>
+
+        <figure class="shot">
+          <img src="img/olist-dashboard.png" alt="Superset dashboard 'Delivery & Customer Experience' showing late delivery rate 8.1%, bad review rate 9.2% for on-time orders vs 54.0% for late orders, and late rate by Brazilian state." loading="lazy" width="3200" height="2610" />
+          <figcaption>Superset dashboard: Delivery &amp; Customer Experience</figcaption>
+        </figure>
+
+        <div class="stats">
+          <div class="stat"><b>5.9×</b><span>bad‑review rate for late orders vs. on‑time (54% vs. 9%), Mann‑Whitney U p &lt; 0.001</span></div>
+          <div class="stat"><b>97%</b><span>of customers ordered only once, so growth came from new customers, not repeat buyers</span></div>
+          <div class="stat"><b>58%</b><span>of revenue comes from the top 30% of customers, and many of them are at risk of churning</span></div>
+        </div>
+
+        <p class="note">
+          <strong>Recommendations:</strong> more conservative delivery estimates for remote states,
+          a second‑order voucher program to improve retention, and win‑back budget targeted at the
+          "At Risk" segment first.
+        </p>
+      </article>
 
       <article class="project">
         <div class="project-head">
@@ -154,8 +190,32 @@
         </p>
       </article>
 
-      <div class="more">
-        <p>More projects coming soon. Follow along on <a href="https://github.com/Shawn-Xiao40" target="_blank" rel="noopener">GitHub</a>.</p>
+      <div class="mini-projects">
+        <article class="card mini">
+          <p class="tag-line">Python · GitHub Actions · Web data collection</p>
+          <h3>UTSC study room demand tracker</h3>
+          <span class="badge">In progress · collecting data</span>
+          <p>
+            UTSC publishes how many seats each library space has, but not how heavily those
+            spaces are used. This automated pipeline snapshots all 16 bookable rooms every
+            30 minutes and stores only status changes, building a booking history that doesn't
+            exist anywhere else. Next: demand by hour and room type, normal weeks vs. December
+            exams, and a Streamlit dashboard.
+          </p>
+          <a href="https://github.com/Shawn-Xiao40/utsc-room-tracker" target="_blank" rel="noopener">View repo ↗</a>
+        </article>
+
+        <article class="card mini">
+          <p class="tag-line">Open source · Apache Superset</p>
+          <h3>Apache Superset contribution</h3>
+          <span class="badge">Pull request open</span>
+          <p>
+            Reviewed and fixed 37 Chinese (zh) translation entries for Superset's alerts and
+            reports features, standardizing key terms and recording the terminology decisions
+            for maintainers, following the project's translation guide.
+          </p>
+          <a href="https://github.com/apache/superset/pull/46077" target="_blank" rel="noopener">View pull request ↗</a>
+        </article>
       </div>
     </section>
   </main>

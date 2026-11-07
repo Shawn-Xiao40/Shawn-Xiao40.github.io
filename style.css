@@ -95,6 +95,17 @@ h1 em { color: var(--brand); font-style: italic; }
 .stat b { display: block; font-family: Fraunces, Georgia, serif; font-size: 1.6rem; font-weight: 600; color: var(--brand); }
 .stat span { font-size: .85rem; color: var(--muted); line-height: 1.5; display: block; }
 .note { font-size: .9rem; border-left: 3px solid var(--accent); padding: 4px 0 4px 14px; margin: 0; }
+.project + .project { margin-top: 24px; }
+.shot { margin: 24px 0; }
+.shot img { width: 100%; height: auto; display: block; border-radius: 10px; border: 1px solid var(--line); }
+.shot figcaption { font-size: .8rem; color: var(--muted); margin-top: 8px; text-align: center; }
+.mini-projects { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 24px; }
+.card.mini { padding: 24px; display: flex; flex-direction: column; }
+.card.mini h3 { font-family: Fraunces, Georgia, serif; font-weight: 600; font-size: 1.2rem; line-height: 1.3; margin: 0 0 8px; }
+.card.mini p:not(.tag-line) { color: var(--muted); font-size: .9rem; margin: 12px 0 16px; flex: 1; }
+.card.mini > a { font-weight: 500; font-size: .9rem; text-decoration: none; }
+.badge { align-self: flex-start; font-family: "JetBrains Mono", monospace; font-size: .7rem; padding: 3px 9px;
+  border-radius: 999px; background: color-mix(in srgb, var(--accent) 14%, transparent); color: var(--accent); }
 .more { text-align: center; color: var(--muted); padding-top: 24px; font-size: .95rem; }
 
 /* education */
@@ -143,7 +154,7 @@ h1 em { color: var(--brand); font-style: italic; }
   .nav nav { gap: 14px; }
   .project { padding: 22px; }
   .project-head { flex-direction: column; }
-  .stats, .about-grid { grid-template-columns: 1fr; }
+  .stats, .about-grid, .mini-projects { grid-template-columns: 1fr; }
   .card { padding: 22px; }
   .edu-head { flex-direction: column; gap: 6px; }
   .exp-row .date { margin-left: 0; width: 100%; }
