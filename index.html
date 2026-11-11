@@ -92,7 +92,7 @@
             <h4>Analytical</h4>
             <ul class="chips">
               <li>Regression analysis</li><li>Statistical modelling</li><li>Hypothesis testing</li>
-              <li>Data visualization</li><li>Cohort &amp; RFM analysis</li><li>Dashboard design</li>
+              <li>A/B testing</li><li>Data visualization</li><li>Cohort &amp; RFM analysis</li><li>Dashboard design</li>
               <li>Financial modelling</li><li>Market research</li>
             </ul>
           </div>
@@ -151,6 +151,41 @@
           <strong>Recommendations:</strong> more conservative delivery estimates for remote states,
           a second‑order voucher program to improve retention, and win‑back budget targeted at the
           "At Risk" segment first.
+        </p>
+      </article>
+
+      <article class="project">
+        <div class="project-head">
+          <div>
+            <p class="tag-line">Python · Experiment analysis · Power analysis · Unit‑tested statistics</p>
+            <h3>Landing page A/B test: should we ship the new page?</h3>
+          </div>
+          <a class="btn small" href="https://github.com/Shawn-Xiao40/ab-test-analysis" target="_blank" rel="noopener">View project ↗</a>
+        </div>
+
+        <p>
+          An end‑to‑end analysis of a real e‑commerce landing page experiment (290K users, 22 days).
+          Before testing anything I audited the data (1.3% of rows had a group/page mismatch),
+          checked that the traffic split was really 50/50, and worked out how small an effect the
+          test could detect. The statistics (z‑test, power, Holm correction, Bayesian A/B, peeking
+          simulation) are implemented with numpy / scipy and covered by unit tests.
+        </p>
+
+        <figure class="shot">
+          <img src="img/abtest-effect.png" alt="Observed difference in conversion between the new and old landing page: -0.16 percentage points with a 95% confidence interval from -0.39 to +0.08, entirely below the 0.34 point lift the test was powered to detect." loading="lazy" width="1200" height="330" />
+          <figcaption>The whole confidence interval sits below the lift the test was powered to detect</figcaption>
+        </figure>
+
+        <div class="stats">
+          <div class="stat"><b>−0.16 pp</b><span>change in conversion with the new page (11.88% vs. 12.04%), 95% CI −0.39 to +0.08, p = 0.19</span></div>
+          <div class="stat"><b>0.34 pp</b><span>smallest effect the test could detect with 80% power, so a meaningful lift would have shown up</span></div>
+          <div class="stat"><b>5% → 26%</b><span>false‑positive rate if the result is checked daily and stopped at the first significant look (A/A simulation)</span></div>
+        </div>
+
+        <p class="note">
+          <strong>Decision:</strong> do not ship. The data rule out any lift above +0.08 pp, and one
+          segment that looked significant on its own (weekends, p = 0.037) did not survive
+          multiple‑testing correction.
         </p>
       </article>
 
